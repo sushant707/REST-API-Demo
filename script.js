@@ -40,6 +40,7 @@ function displayPosts(posts, users) {
             <h2>${post.title}</h2>
             <p>${post.body}</p>
             <p><strong>Author:</strong> ${user.name} (${user.email})</p>
+            <div id="details-${post.id}" class="post-details"></div>
         `;
 
         postElement.addEventListener('click', () => displayPostDetails(post.id));
@@ -63,9 +64,9 @@ async function displayPostDetails(postId) {
         const post = await postResponse.json();
         const comments = await commentsResponse.json();
 
-        const postDetailsContainer = document.getElementById('postDetailsContainer');
-        postDetailsContainer.innerHTML = `
-            <h2>${post.title}</h2>
+        const detailsContainer = document.getElementById(`details-${postId}`);
+        detailsContainer.innerHTML = `
+            <h3>Post Details</h3>
             <p>${post.body}</p>
             <h3>Comments</h3>
             <ul>
@@ -76,15 +77,20 @@ async function displayPostDetails(postId) {
                     </li>
                 `).join('')}
             </ul>
-            <button onclick="hidePostDetails()">Close</button>
+            <button onclick="hidePostDetails(${postId})">Close</button>
         `;
 
-        postDetailsContainer.style.display = 'block';
+        detailsContainer.style.display = 'block';
     } catch (error) {
         displayError(error.message);
     } finally {
         showLoader(false);
     }
+}
+
+function hidePostDetails(postId) {
+    const detailsContainer = document.getElementById(`details-${postId}`);
+    detailsContainer.style.display = 'none';
 }
 
 function displayError(message) {
@@ -98,20 +104,12 @@ function hideError() {
     errorContainer.style.display = 'none';
 }
 
-function hidePostDetails() {
-    const postDetailsContainer = document.getElementById('postDetailsContainer');
-    postDetailsContainer.style.display = 'none';
-}
-
 function showLoader(show) {
-    const postsContainer = document.getElementById('postsContainer');
-    const loader = document.createElement('div');
-    loader.className = 'loader';
+    const loader = document.getElementById('loader');
     if (show) {
-        postsContainer.appendChild(loader);
+        loader.style.display = 'block';
     } else {
-        const loaderElement = document.querySelector('.loader');
-        if (loaderElement) loaderElement.remove();
+        loader.style.display = 'none';
     }
 }
 
