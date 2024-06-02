@@ -24,7 +24,10 @@ This project is a demonstration of using vanilla JavaScript to interact with RES
 
 ## Screenshots
 
-_Add screenshots of your application here for visual reference._
+![Screenshot 2024-06-02 213410](https://github.com/sushant707/REST-API-Demo/assets/136911374/f01bf470-fa5f-477d-a86d-201e8f3e32b9)
+
+![Screenshot 2024-06-02 213652](https://github.com/sushant707/REST-API-Demo/assets/136911374/8e22f2a1-e87e-4718-9f49-d0bd191fdebd)
+
 
 ## Contributing
 
