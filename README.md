@@ -23,10 +23,14 @@ This project is a demonstration of using vanilla JavaScript to interact with RES
 2. Open `index.html` in your web browser to explore the application.
 
 ## Screenshots
+![Screenshot 2024-06-02 223610](https://github.com/sushant707/REST-API-Demo/assets/136911374/8d2562c8-721e-49e4-ae5d-9ac56c010dd8)
 
-![Screenshot 2024-06-02 215340](https://github.com/sushant707/REST-API-Demo/assets/136911374/06b96c2e-4814-4a26-a273-43568faccca1)
-![Screenshot 2024-06-02 215358](https://github.com/sushant707/REST-API-Demo/assets/136911374/f314951f-94f8-4156-9215-b20f86ddff05)
-![Screenshot 2024-06-02 215636](https://github.com/sushant707/REST-API-Demo/assets/136911374/5a8bbe45-5998-4ccc-813c-d45b802f1114)
+![Screenshot 2024-06-02 223628](https://github.com/sushant707/REST-API-Demo/assets/136911374/b1500249-8779-4f26-a0c9-8f99f9cf1a31)
+
+![Screenshot 2024-06-02 223640](https://github.com/sushant707/REST-API-Demo/assets/136911374/9201a50e-6916-4dce-a1be-1504689552c7)
+
+
+
 
 ## Contributing
 
